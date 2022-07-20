@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.61.1'
+project:
+    name: dreamhouse-lwc
+    package:
+        name: dreamhouse-lwc
+        api_version: '55.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/dreamhouse-lwc/tests
+            options:
+                outputdir: robot/dreamhouse-lwc/results
+
+    robot_testdoc:
+        options:
+            path: robot/dreamhouse-lwc/tests
+            output: robot/dreamhouse-lwc/doc/dreamhouse-lwc_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
